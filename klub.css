@@ -279,7 +279,7 @@ body {
   padding-right: 1rem;
   background-color: #f7f7f7;
   border: none;
-  border-radius: 45px;
+  border-radius: 45px 45px 0 0;
   position: relative;
   margin-top: 15.5rem;
 }
