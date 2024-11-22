@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>KlubApp - McDonald's</title>
+    <link rel="stylesheet" href="klub.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>KLUB</h1>
+            <h2>LA ROCHELLE</h2>
+        </div>
+        <div class="notification-icon">
+            🔔
+        </div>
+    </header>
+
+    <!-- Liste des établissements -->
+    <div class="establishments" id="establishment-list"></div>
+
+    <!-- Modale des détails -->
+    <div class="establishment-details" id="details-modal">
+        <div class="container">
+            <img src="macdooffre2.0.jpeg" alt="ariba" class="cropped-image">
+            <img src="logomacdo.jpeg" alt="ariba" class="imagemacdo">
+        </div>
+        <div>
+            <button class="btnf" id="close-details"><img src="flecha.png" alt="" style="height: 0.8rem;"></button>
+            <button class="btnc" id="toggle-favorite"><img src="corason.png" alt="" style="height: 1rem;"></button>
+        </div>
+        <div id="boxconf" class="boxconf">
+            <p class="element">Offre utilisée avec succès</p>
+        </div>
+        <div class="bttt">
+            <img src="pnggggg1.png" alt="btt" class="btt" >
+            <img src="pnggggg.png" alt="btt" class="btt2">
+        </div>
+        <div class="boxd">
+            <div style="font-size: 10px; color: grey;margin-top: 1.7rem;">RESTAURANTS<br><br><div style="font-weight: 500; font-size: 1.25rem; color: black;">Mcdonald's</div></div>
+            <h2 id="establishment-name" style="position: fixed; bottom: -300%;"></h2>
+            <img src="rese.jpeg" alt="" class="rese">
+            <p  class="txt">Le midi ou en soirée, la célèbre chaine de restauration rapide t'ouvre les portes de ses restaurants rochelais (les Mimes, Beaulieu, Angoulins, Lagord et Ferrières)</p>
+            <div style="display: flex;">
+                <img src="etiq.jpeg" alt="" class="etiq">
+                <P style="color: #ff237f; margin-left: 0.5rem; font-weight: 550; font-size: 15px;">  OFFRE PONCTUELLE</P>
+            </div>
+            <div class="offer">
+                <h4>1 MENU ACHETÉ = 1 MENU OFFERT <div class="beuteu">(Sur toutes les gammes hors menu Happy Meal et McSmart)</div></h4>
+            </div>
+            <button class="use-offer-button" onclick="confirmUseOffer()">UTILISER CETTE OFFRE</button>
+            <div style="display: flex;">
+                <img src="certif.jpeg" alt="" class="certif">
+                <p style="color: #88cffd; margin-left: 0.5rem; font-weight: 550; font-size: 15px;">OFFRE PERMANENTE</p>
+            </div>
+            <div class="offer2">
+                <p>-20% sur l'addition OU un sandwich offert pour l'achat d'un menu best-of(ou Maxi)</p>
+            </div>
+            <button class="show-card" onclick="showCard()">MONTRER MA CARTE</button>
+        </div>
+    </div>
+
+    <!-- Modale pour afficher la carte -->
+    <div id="cardModal" class="card-modal" style="display: none;">
+        <div class="card-content">
+            <span class="close-btn" onclick="closeCard()">&times;</span>
+            <img src="https://via.placeholder.com/300x400" alt="Votre carte" class="card-image">
+        </div>
+    </div>
+
+    <!-- Overlay de confirmation -->
+    <div id="confirmationOverlay" class="overlay" style="display: none;">
+        <div class="ari"><img src="klublogo.png" alt="" class="ariba"></div>
+        <div class="confirmation-box">
+            <img src="pngwing.com.png" class="croixbail" onclick="cancelOffer()">
+            <h4 style="color: #ff237f;">Es-tu sûr de vouloir utiliser<br> cette offre ?</h4>
+            <p style="margin-bottom: 18px;">Assure-toi d'être à côté d'un<br> membre du staff de l'établissement.<br>Une fois valider, cette offre ne sera<br> plus disponible.</p>
+            <button class="bouton-oui" onclick="animation()">Oui</button>
+            <button class="bouton-non" onclick="cancelOffer()">Non</button>
+        </div>
+    </div>
+
+    <script src="kclubia.js"></script>
+</body>
+</html>
