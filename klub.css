@@ -229,7 +229,7 @@ body {
 .imagemacdo {
   position: absolute; /* Positionnement absolu pour permettre le déplacement */
   width: 100%; /* Adapte l'image à la largeur du conteneur */
-  height: 100%; /* Adapte l'image à la hauteur du conteneur */
+  height: 40%; /* Adapte l'image à la hauteur du conteneur */
   object-fit: cover; /* Rogne l'image pour remplir le conteneur */
   object-position: top; /* Centre l'image dans le conteneur */
   animation: slide-animation2 8s ease-in-out infinite; /* Animation avec transition */
